@@ -100,6 +100,13 @@ const components = {
   ...grid,
   ...flexbox
 }
+import WindowMock from 'window-mock';
+
+const isClient = typeof window !== 'undefined';
+
+if (!isClient) {
+  global.window = new WindowMock();
+}
 
 const install = function () {
   Object.keys(components).forEach((key) => {
@@ -108,7 +115,7 @@ const install = function () {
   retina()
 }
 
-if (typeof window !== 'undefined' && window.Vue) install(window.Vue)
+if (isClient && window.Vue) install(window.Vue)
 
 module.exports = {
   ...components,
