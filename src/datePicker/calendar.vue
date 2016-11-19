@@ -32,6 +32,10 @@ import calendarMonth from './calendarMonth'
 import * as dateUtils from './dateUtils'
 import calendarYear from './calendarYear'
 import keycode from 'keycode'
+
+if (typeof window === 'undefined') {
+  global.window = {};
+}
 export default {
   props: {
     dateTimeFormat: {

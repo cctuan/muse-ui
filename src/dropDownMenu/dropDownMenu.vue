@@ -21,6 +21,10 @@ import icon from '../icon'
 import popover from '../popover'
 import {menu} from '../menu'
 import {isNull} from '../utils'
+
+if (typeof window === 'undefined') {
+  global.window = {};
+}
 export default {
   name: 'mu-dropDown-menu',
   props: {

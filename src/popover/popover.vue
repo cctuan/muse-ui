@@ -7,6 +7,10 @@
 </template>
 
 <script>
+
+if (typeof window === 'undefined') {
+  global.window = {};
+}
 import Popup from '../internal/popup'
 import clickoutside from '../internal/clickoutside'
 import scroll from '../internal/scroll'

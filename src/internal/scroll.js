@@ -1,3 +1,8 @@
+
+if (typeof window === 'undefined') {
+  global.window = {};
+}
+
 export default {
   props: {
     scroller: {

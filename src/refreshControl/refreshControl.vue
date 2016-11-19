@@ -6,6 +6,10 @@
 </template>
 
 <script>
+
+if (typeof window === 'undefined') {
+  global.window = {};
+}
 import Drag from '../utils/drag'
 import icon from '../icon'
 import circular from '../internal/circular'

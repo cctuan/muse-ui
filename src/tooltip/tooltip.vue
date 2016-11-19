@@ -7,6 +7,10 @@
 </template>
 
 <script>
+
+if (typeof window === 'undefined') {
+  global.window = {};
+}
 export default {
   name: 'mu-tooltip',
   props: {

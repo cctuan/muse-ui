@@ -2,6 +2,11 @@ var docStyle = document.documentElement.style
 var engine
 var translate3d = false
 
+
+if (typeof window === 'undefined') {
+  global.window = {};
+}
+
 if (window.opera && Object.prototype.toString.call(window.opera) === '[object Opera]') {
   engine = 'presto'
 } else if ('MozAppearance' in docStyle) {
