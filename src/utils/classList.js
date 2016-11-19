@@ -6,6 +6,9 @@
 var trim = /^\s+|\s+$/g
 var whitespace = /\s+/g
 
+if (typeof window === 'undefined') {
+  global.window = {};
+}
 function interpret (input) {
   return typeof input === 'string' ? input.replace(trim, '').split(whitespace) : input
 }

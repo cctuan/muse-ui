@@ -18,6 +18,10 @@
 
 <script>
 import Popup from '../internal/popup'
+
+if (typeof window === 'undefined') {
+  global.window = {};
+}
 export default {
   mixins: [Popup],
   name: 'mu-dialog',

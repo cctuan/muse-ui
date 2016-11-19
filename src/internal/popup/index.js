@@ -1,6 +1,10 @@
 import PopupManager from './manager'
 import {getZIndex} from './utils'
 import keycode from 'keycode'
+
+if (typeof window === 'undefined') {
+  global.window = {};
+}
 export default {
   props: {
     overlay: {

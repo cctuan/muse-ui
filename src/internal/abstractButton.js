@@ -5,6 +5,11 @@ import {isPc} from '../utils'
 let tabPressed = false
 let listening = false
 
+
+if (typeof window === 'undefined') {
+  global.window = {};
+}
+
 function listenForTabPresses () {
   if (!listening) {
     window.addEventListener('keydown', (event) => {

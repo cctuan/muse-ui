@@ -1,3 +1,7 @@
+
+if (typeof window === 'undefined') {
+  global.window = {};
+}
 export let getOffset = function (el) {
   let box = el.getBoundingClientRect()
   let body = document.body
